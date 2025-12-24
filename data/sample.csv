@@ -1,0 +1,11 @@
+date,product_category,quantity,price,region,customer_id
+2024-01-15,Electronics,2,299.99,North,CUST001
+2024-01-16,Clothing,5,49.99,South,CUST002
+2024-01-17,Home,1,899.99,East,CUST003
+2024-01-18,Electronics,3,159.99,West,CUST004
+2024-01-19,Clothing,10,29.99,North,CUST005
+2024-01-20,Home,2,449.99,South,CUST001
+2024-01-21,Electronics,1,1299.99,East,CUST006
+2024-01-22,Clothing,7,39.99,West,CUST002
+2024-01-23,Home,4,199.99,North,CUST007
+2024-01-24,Electronics,2,599.99,South,CUST003

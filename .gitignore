@@ -1,0 +1,30 @@
+# Virtual environment
+env/
+venv/
+
+# Python cache files
+*.pyc
+__pycache__/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Generated files
+output/
+
+# Environment variables
+.env
+
+# Database files
+*.duckdb*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
