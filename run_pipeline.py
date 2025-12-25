@@ -124,7 +124,8 @@ def run_analytics(pipeline, logger):
                 ROUND(AVG(quantity), 2) as avg_quantity
             FROM sales_analytics.sales_data
         """
-        results['summary'] = client.execute_query(summary_query).df()
+        with client.execute_query(summary_query) as cursor:
+            results['summary'] = cursor.df()
         logger.info("✓ Summary statistics calculated")
 
         # Category analysis
@@ -139,7 +140,8 @@ def run_analytics(pipeline, logger):
             GROUP BY product_category
             ORDER BY total_revenue DESC
         """
-        results['category'] = client.execute_query(category_query).df()
+        with client.execute_query(category_query) as cursor:
+            results['category'] = cursor.df()
         logger.info("✓ Category analysis completed")
 
         # Regional analysis
@@ -153,7 +155,8 @@ def run_analytics(pipeline, logger):
             GROUP BY region
             ORDER BY total_revenue DESC
         """
-        results['regional'] = client.execute_query(regional_query).df()
+        with client.execute_query(regional_query) as cursor:
+            results['regional'] = cursor.df()
         logger.info("✓ Regional analysis completed")
 
     return results
